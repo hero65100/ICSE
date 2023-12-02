@@ -1,0 +1,31 @@
+![image](https://github.com/hero65100/ICSE/assets/152681727/c2b2817e-42f2-4a6f-9463-408b4193bde7)
+import java.util.*;
+public class Bank {
+	private void x(int p, int r, int n, char op) {
+		switch(op){
+		case 'i': double a=p*Math.pow((1+(r/100.0)),n);
+				System.out.println("Term deposit: "+a);
+				break;
+		case '2': double h=((p*n)+(p*n*(n+1.0)))/(2.0*r)/(100.0*1.0)/12.0;
+		System.out.println("Recurring deposit: "+h);
+		break;
+		default:System.out.println("Error");
+		break;
+		}
+		
+	}
+	public static void main(String[] args) {
+		Scanner sc= new Scanner(System.in);
+		System.out.println("Enter option:i.For term deposit - ii.For recorring deposit");
+		char op=sc.next().charAt(0);
+		System.out.println("Enter p,r,n");
+		int p=sc.nextInt();
+		int r=sc.nextInt();
+		int n=sc.nextInt();
+		Bank obj=new Bank();
+		obj.x(p,r,n,op);
+	}
+
+	
+
+}
